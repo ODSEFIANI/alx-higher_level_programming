@@ -74,7 +74,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """python"""
+        
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
