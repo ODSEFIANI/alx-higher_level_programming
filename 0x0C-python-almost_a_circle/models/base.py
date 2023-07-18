@@ -86,11 +86,11 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
 
-        Reads from `<cls.__name__>.csv`.
+        """Reads from `<cls.__name__>.csv`.
 
         Returns:
             If the file does not exist - an empty list.
-            Otherwise - a list of instantiated classes.
+            Otherwise - a list of instantiated classes."""
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as csvfile:
