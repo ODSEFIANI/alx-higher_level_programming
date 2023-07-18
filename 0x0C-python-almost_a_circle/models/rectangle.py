@@ -150,14 +150,14 @@
                         self.y = value
 
         def to_dictionary(self):
-        """
-        returns the dict
-        """
-        d = {
-            'x': self.x,
-            'y': self.y,
-            'id': self.id,
-            'height': self.height,
-            'width': self.width
-        }
-        return d
+            """
+            returns the dict
+            """
+            d = {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+            }
+            return d
