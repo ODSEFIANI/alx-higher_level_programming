@@ -5,7 +5,6 @@ import turtle
 
 
 class Base:
-    """base"""
 
 
     __nb_objects = 0
@@ -44,7 +43,6 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """test"""
 
         if json_string is None or json_string == "[]":
             return []
@@ -52,7 +50,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """test"""
 
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
@@ -64,7 +61,6 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """test"""
         try:
             with open(filename, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
@@ -74,7 +70,6 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
@@ -112,7 +107,6 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """draw"""
 
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
