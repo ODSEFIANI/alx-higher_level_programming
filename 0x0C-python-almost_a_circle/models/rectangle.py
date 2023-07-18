@@ -48,7 +48,7 @@
             """
             gets th value of the e width
             """
-        return self.__width
+            return self.__width
 
         @width.setter
         def width(self, value):
@@ -62,28 +62,28 @@
             """
             gets the y valaue
             """
-        return self.__y
+            return self.__y
 
         @y.setter
         def y(self, value):
             """
             sets the y value
             """
-        self.__y = value
+            self.__y = value
 
         @property
         def x(self):
             """
             gets the x value
             """
-        return self.__x
+            return self.__x
 
         @x.setter
         def x(self, value):
             """
             sets the x value
             """
-        self.__x = value
+            self.__x = value
 
         def __str__(self):
             """Return the print and str representation of the Rectangle."""
