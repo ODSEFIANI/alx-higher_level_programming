@@ -1,33 +1,33 @@
 #!/usr/bin/python3
-"""
-Rectangle
-"""
-
-
-from models.base import Base
-
-
-class Rectangle(Base):
     """
-    Rectangle class intialization
+    Rectangle
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        creates and update a  rectangle
 
-        Args:
-            width (int): width
-            height (int): height
-            y (int): y
-            x (int): x
-            id (int): id
+    from models.base import Base
+
+
+    class Rectangle(Base):
         """
-        super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        Rectangle class intialization
+        """
+
+        def __init__(self, width, height, x=0, y=0, id=None):
+            """
+                creates and update a  rectangle
+
+                Args:
+                    width (int): width
+                    height (int): height
+                    y (int): y
+                    x (int): x
+                    id (int): id
+                """
+            super().__init__(id)
+            self.__width = width
+            self.__height = height
+            self.__x = x
+            self.__y = y
 
         @property
          def height(self):
