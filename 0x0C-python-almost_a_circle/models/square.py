@@ -14,14 +14,14 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """
-        Creates a Square
+        creat a Square attributes
         """
         super().__init__(size, size, x, y, id)
         self.size = size
 
     def __str__(self):
         """
-        return [Square] (<id>) <x>/<y> - <size>
+        return square dimension and infos
         """
         id = self.id
         x = self.x
@@ -32,21 +32,21 @@ class Square(Rectangle):
     @property
     def size(self):
         """
-        gets the size
+        getter to the size of the square
         """
         return self.width
 
     @size.setter
     def size(self, value):
         """
-        sets the size
+        setter the  size value of the square
         """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
         """
-        updates a square
+        updates a square values from extern variables
         """
         d = {}
         if args:
@@ -70,7 +70,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        returns the dictionary representation of a Square
+        returns the dictionary infos
         """
         d = {
             'id': self.id,
