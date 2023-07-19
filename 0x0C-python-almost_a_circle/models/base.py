@@ -22,7 +22,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Return the JSON.
+        """Return the JSON format string.
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
@@ -30,7 +30,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write
+        """Write inside the file
         """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
@@ -42,7 +42,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Return the deserialization of a 
+        """Return the deserialization of a in python format
         """
         if json_string is None or json_string == "[]":
             return []
@@ -50,7 +50,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantie
+        """Return a class instance of sup
         """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
@@ -62,7 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Return a list of classes
+        """Return classes list
         """
         filename = str(cls.__name__) + ".json"
         try:
@@ -74,7 +74,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Write
+        """Write into the file
         """
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
@@ -91,7 +91,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Return a list of cl
+        """Return cl list
         """
         filename = cls.__name__ + ".csv"
         try:
@@ -109,7 +109,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw Rectangles
+        """Draw Rectangles with the requestqed design
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
