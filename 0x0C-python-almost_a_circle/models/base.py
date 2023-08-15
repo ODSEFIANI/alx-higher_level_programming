@@ -1,17 +1,18 @@
 #!/usr/bin/python3
+"""Dbase module."""
 import json
 import csv
 import turtle
 
 
 class Base:
-
+    """Represent the base m
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base.
-
+        """Initiali
         """
         if id is not None:
             self.id = id
@@ -21,8 +22,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Return the JSON serialization of a list of dicts.
-
+        """Return the JSON format string.
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
@@ -30,8 +30,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write the JSON serialization of a list of objects to a file.
-
+        """Write inside the file
         """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
@@ -43,14 +42,16 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-
+        """Return the deserialization of a in python format
+        """
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-
+        """Return a class instance of sup
+        """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
                 new = cls(1, 1)
@@ -61,6 +62,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """Return classes list
+        """
+        filename = str(cls.__name__) + ".json"
         try:
             with open(filename, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
@@ -70,6 +74,8 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """Write into the file
+        """
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
@@ -85,12 +91,8 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-
-        Reads from `<cls.__name__>.csv`.
-
-        Returns:
-            If the file does not exist - an empty list.
-            Otherwise - a list of instantiated classes.
+        """Return cl list
+        """
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as csvfile:
@@ -107,7 +109,8 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-
+        """Draw Rectangles with the requestqed design
+        """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
